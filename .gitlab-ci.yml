@@ -1,0 +1,8 @@
+build docs:
+  stage: build
+  # nightly from 2019-10-15
+  image: rustlang/rust@sha256:1c6047662ec1672fd7411c9bd96b2883a046d3fd0e04a79647971e2348dd8ae7
+  script: cargo doc --no-deps
+  artifacts:
+    paths:
+      - target/doc
