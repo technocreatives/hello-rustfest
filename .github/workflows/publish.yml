@@ -23,9 +23,10 @@ jobs:
       - name: Move generated docs
         run: cp -r target/doc/ docs
       - name: Commit generated docs
-        uses: "docker://cdssnc/auto-commit-github-action"
-        needs: 
-          - "Move generated docs"
-        args: "Regenerated docs"
-        secrets:
-          - "TOKEN"
+        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+        with:
+          commit_message: Apply automatic changes
+          branch: ${{ github.head_ref }}
+          file_pattern: docs/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
