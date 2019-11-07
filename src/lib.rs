@@ -1,5 +1,5 @@
-//! Thank you for going to a website you found on a coffee cup, we appreciate it
-//! a lot! We hope you are having a great time in Barcelona!
+//! Hej, we hope you are enjoying some coffee and have a great time in
+//! Barcelona!
 //!
 //! # We are The Techno Creatives
 //!
