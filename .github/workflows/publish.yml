@@ -9,15 +9,15 @@ jobs:
     steps:
       - name: Checkout latest
         uses: actions/checkout@master
-      - name: Install stable toolchain
+      - name: Install nightly toolchain
         uses: actions-rs/toolchain@v1
         with:
-            toolchain: stable
+            toolchain: nightly
             override: true
       - name: Build docs
         uses: actions-rs/cargo@v1
         with:
-          toolchain: stable
+          toolchain: nightly
           command: doc
           args: --no-deps
       - name: Move generated docs
