@@ -1,5 +1,0 @@
-var N=null,E="",T="t",U="u",searchIndex={};
-var R=["result"];
-
-searchIndex["hello_rustfest"]={"doc":"Thank you for going to a website you found on a coffee…","i":[[4,"Role","hello_rustfest","The dev jobs we are currently hiring for.",N,N],[13,"MultidisciplineDeveloper",E,"Multi-discipline developers",0,N],[13,"EmbeddedDev",E,"Embedded developers & hardware engineers",0,N],[5,"apply_for_a_job",E,"Join us!",N,[[["role"],["person"]]]],[5,"hire_us",E,"Does your company want to get started with Rust and/or…",N,[[["project"],["company"]]]],[11,"into",E,E,0,[[],[U]]],[11,"from",E,E,0,[[[T]],[T]]],[11,"to_owned",E,E,0,[[["self"]],[T]]],[11,"clone_into",E,E,0,[[["self"],[T]]]],[11,"try_from",E,E,0,[[[U]],[R[0]]]],[11,"try_into",E,E,0,[[],[R[0]]]],[11,"borrow",E,E,0,[[["self"]],[T]]],[11,"borrow_mut",E,E,0,[[["self"]],[T]]],[11,"type_id",E,E,0,[[["self"]],["typeid"]]],[11,"clone",E,E,0,[[["self"]],["role"]]],[11,"fmt",E,E,0,[[["self"],["formatter"]],[R[0]]]]],"p":[[4,"Role"]]};
-initSearch(searchIndex);addSearchOptions(searchIndex);

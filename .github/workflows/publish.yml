@@ -21,7 +21,7 @@ jobs:
           command: doc
           args: --no-deps
       - name: Move generated docs
-        run: cp -r target/doc/ docs
+        run: cp -r target/doc/* docs
       - name: Commit generated docs
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
