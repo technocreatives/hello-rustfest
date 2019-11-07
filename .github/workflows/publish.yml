@@ -23,10 +23,14 @@ jobs:
       - name: Move generated docs
         run: cp -r target/doc/ docs
       - name: Commit generated docs
-        uses: stefanzweifel/git-auto-commit-action@v2.3.0
-        with:
-          commit_message: Apply automatic changes
-          branch: ${{ github.head_ref }}
-          file_pattern: docs/*
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          git config user.email "bob@technocreatives.com"
+          git config user.name "Byggare Bob"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git checkout master
+          git add .
+          git commit -m "Generated the docs again"
+          git push origin master
+
