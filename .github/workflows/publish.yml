@@ -1,0 +1,31 @@
+on: push
+
+name: Publish
+
+jobs:
+  publish:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest
+        uses: actions/checkout@master
+      - name: Install stable toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+            toolchain: stable
+            override: true
+      - name: Build docs
+        uses: actions-rs/cargo@v1
+        with:
+          toolchain: stable
+          command: doc
+          args: --no-deps
+      - name: Move generated docs
+        run: cp -r target/doc/ docs
+      - name: Commit generated docs
+        uses: "docker://cdssnc/auto-commit-github-action"
+        needs: 
+          - "Move generated docs"
+        args: "Regenerated docs"
+        secrets:
+          - "TOKEN"
