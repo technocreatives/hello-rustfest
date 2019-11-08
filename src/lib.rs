@@ -1,5 +1,5 @@
-//! Thank you for going to a website you found on a coffee cup, we appreciate it
-//! a lot! We hope you are having a great time in Barcelona!
+//! Hej, we hope you are enjoying some coffee and have a great time in
+//! Barcelona!
 //!
 //! # We are The Techno Creatives
 //!
@@ -108,7 +108,25 @@ pub enum Role {
     /// [Apply here!][here]
     ///
     /// [here]: https://technocreatives.homerun.co/embedded-developers-hardware-engineers/en
-    EmbeddedDev,
+    EmbeddedDeveloper,
+    /// Senior iOS Developer
+    ///
+    /// Do you enjoy developing for iOS and want to do something more? As a
+    /// creative agency, devs are expected to work closely with the design
+    /// teams, often working together as one to solve a client problem or
+    /// deliver a solid product. No more freaking out alone trying to build a UI
+    /// when the designers will have your back.
+    ///
+    /// We're building virtual rollercoasters, analogue smartwatches,
+    /// interaction solutions in autonomous cars, smart wheelchairs, VR and AR
+    /// for global trade shows, web apps to revolutionise the healthcare
+    /// industry in Sweden, and even working to improve support for minority
+    /// languages around the world.
+    ///
+    /// [Apply here!][here]
+    ///
+    /// [here]: https://technocreatives.homerun.co/senior-ios-developer/en
+    IOsDeveloper,
 }
 
 /// If you have any questions what the roles entail, don't hesitate to reach
